@@ -38,4 +38,8 @@ window.onload = function () {
     logo.addEventListener('click', (event) => {
         menu.classList.toggle('mostrar')
     })
+
+    menu.addEventListener('mouseleave',(event)=>{
+        menu.classList.remove('mostrar')
+    })
 }
