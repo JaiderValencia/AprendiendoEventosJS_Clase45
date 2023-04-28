@@ -1,17 +1,29 @@
-window.onload = function(){
+window.onload = function () {
     let body = document.querySelector('body');
     let moviesListTitulo = document.querySelector('.moviesListTitulo');
+    let logo = document.querySelector('figure img');
 
     let modo = confirm('Desea modo oscuro');
-    if(modo){
+    if (modo) {
         body.style.backgroundColor = '#7f7f7f'
         body.classList.add('fondoMoviesList');
     }
-    
+
     console.log(body);
     moviesListTitulo.innerHTML = 'LISTADO DE PELÍCULAS';
-    moviesListTitulo.style.color ='white';
+    moviesListTitulo.style.color = 'white';
     moviesListTitulo.style.backgroundColor = 'teal';
     moviesListTitulo.style.padding = '20px';
 
+    logo.addEventListener('mouseover', () => {
+        if (modo) {
+            body.style.backgroundColor = '#7f7f7f';
+            body.classList.add('fondoMoviesList');
+            modo = modo
+        } else {
+            body.style.backgroundColor = '#fff';
+            body.classList.remove('fondoMoviesList');
+        }
+        modo = !modo
+    })
 }
