@@ -1,4 +1,4 @@
-window.onload = function(){
+window.onload = function () {
     let titulo = document.querySelector('.moviesAddTitulo')
     let formulario = document.querySelector('#formulario');
     let article = document.querySelector('article');
@@ -7,6 +7,12 @@ window.onload = function(){
     article.classList.add('fondoTransparente');
     formulario.classList.add('fondoCRUD');
 
-
+    titulo.addEventListener('mouseover', () => {
+        if (titulo.style.color != 'red') {
+            titulo.style.color = 'red'
+        } else {
+            titulo.style.color = 'black'
+        }
+    })
 
 }
